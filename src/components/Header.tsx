@@ -12,9 +12,8 @@ const Wrapper = styled.header`
 const Logo = styled.img`
 	padding: 10px;
 	border-radius: 25px;
-
+	transition: background-color 0.3s ease-in-out;
 	&:hover {
-		transition: background-color 0.3s ease-in-out;
 		background-color: #303138;
 	}
 `;
@@ -31,14 +30,15 @@ const Li = styled.li`
 	display: inline-block;
 	margin: 0px 30px;
 	font-size: 15px;
+	transition: color 0.3s ease-in-out;
 
 	&:hover {
-		transition: color 0.3s ease-in-out;
 		color: #0088a9;
 	}
 `;
 
 const Button = styled.button`
+	margin-right: 80px;
 	padding: 9px 30px;
 	background-color: rgba(0, 136, 169, 1);
 	color: white;
@@ -69,12 +69,12 @@ const Header = () => {
 						<A href="/">Projects</A>
 					</Li>
 					<Li>
-						<A href="/">Contact</A>
+						<A href="/">Info</A>
 					</Li>
 				</Ul>
 			</NavBar>
 			<A href="/">
-				<Button>API Informatyka</Button>
+				<Button>Contact</Button>
 			</A>
 		</Wrapper>
 	);
