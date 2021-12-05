@@ -12,14 +12,23 @@ const Wrapper = styled.main`
 	justify-content: center;
 	background-image: linear-gradient(60deg, #9b2440, #9e6b1f);
 	color: #ffffff;
+	font-size: 25px;
 `;
 
 const Image = styled.img`
-	height: 100px;
-	width: 100px;
+	height: 150px;
+	width: 150px;
 	margin-bottom: 10px;
 	border-radius: 100%;
-	border: white solid 2px;
+	border: #303138 solid 4px;
+`;
+
+const Image2 = styled.img`
+	height: 200px;
+	width: 200px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	border: #303138 solid 4px;
 `;
 
 const P = styled.p`
@@ -89,9 +98,9 @@ const Main = () => {
 			</div>
 			{presance.spotify && (
 				<div>
-					<Image src={presance.spotify.album_art_url} />
-					<P>listening to: {presance.spotify.song}</P>
-					<P>artist: {presance.spotify.artist.split(";").join()}</P>
+					<Image2 src={presance.spotify.album_art_url} />
+					<P>Listening to: {presance.spotify.song}</P>
+					<P>Artist: {presance.spotify.artist.split(";").join()}</P>
 				</div>
 			)}
 			{customStatus && (
