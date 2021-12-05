@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.header`
@@ -18,7 +19,7 @@ const Logo = styled.img`
 	}
 `;
 
-const A = styled.a`
+const A = styled(Link)`
 	color: inherit;
 `;
 
@@ -57,23 +58,23 @@ const Button = styled.button`
 const Header = () => {
 	return (
 		<Wrapper>
-			<A href="/">
+			<A to="/">
 				<Logo src="/logo.png" alt="logo" />
 			</A>
 			<NavBar>
 				<Ul>
 					<Li>
-						<A href="/">About</A>
+						<A to="/about">About</A>
 					</Li>
 					<Li>
-						<A href="/">Projects</A>
+						<A to="/projects">Projects</A>
 					</Li>
 					<Li>
-						<A href="/">Info</A>
+						<A to="info">Info</A>
 					</Li>
 				</Ul>
 			</NavBar>
-			<A href="/">
+			<A to="contact">
 				<Button>Contact</Button>
 			</A>
 		</Wrapper>
