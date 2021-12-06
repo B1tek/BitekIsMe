@@ -41,7 +41,7 @@ const Ul = styled.ul``;
 const Li = styled.li`
 	display: inline-block;
 	margin: 0px 10px;
-	font-size: 15px;
+	font-size: 13px;
 	transition: color 0.3s ease-in-out;
 
 	&:hover {
@@ -61,8 +61,8 @@ const Footer = () => {
 						</A>
 					</Li>
 					<Li>
-						<A href="https://www.facebook.com/szymon.kosinski.7737/" target="_blank">
-							<Button>Facebook</Button>
+						<A href="https://discord.com/users/529643065124585512" target="_blank">
+							<Button>Discord</Button>
 						</A>
 					</Li>
 					<Li>
