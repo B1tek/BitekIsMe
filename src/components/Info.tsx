@@ -6,8 +6,8 @@ const Wrapper = styled.main`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: linear-gradient(60deg, #9b2440, #9e6b1f);
-	color: #1e2027;
+	background-color: #32333a;
+	color: #ffffff;
 `;
 
 const Info = () => {
