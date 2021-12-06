@@ -7,41 +7,72 @@ const Wrapper = styled.main`
 	text-align: center;
 	flex: 1;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	background-image: linear-gradient(60deg, #9b2440, #9e6b1f);
+	background-color: #32333a;
 	color: #ffffff;
 	font-size: 20px;
 `;
 
-const Div = styled.div`
+const AvatarContainer = styled.div`
 	margin-bottom: 30px;
 	margin-top: 30px;
-	padding: 50px;
-	width: 70%;
+	padding: 25px;
+	width: 20%;
 	background-color: #24252a;
 	border-radius: 25px;
 `;
 
-const Image = styled.img`
+const LoadingContainer = styled.div`
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding: 50px;
+	background-color: #24252a;
+	border-radius: 25px;
+`;
+
+const SpotifyContainer = styled.div`
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding: 25px;
+	background-color: #24252a;
+	border-radius: 25px;
+`;
+
+const DiscordStatusContainer = styled.div`
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding: 25px;
+	width: 20%;
+	background-color: #24252a;
+	border-radius: 25px;
+`;
+
+const Avatar = styled.img`
 	height: 150px;
 	width: 150px;
 	margin-bottom: 10px;
-	border-radius: 100%;
-	border: #25252b solid 4px;
+	border-radius: 20px;
+	border: #32333a solid 4px;
 `;
 
-const Image2 = styled.img`
+const DiscordAvatar = styled.div``;
+
+const CustomStatus = styled.div``;
+
+const AlbumImg = styled.img`
 	height: 200px;
 	width: 200px;
 	margin-bottom: 10px;
 	border-radius: 20px;
-	border: #303138 solid 4px;
+	border: #32333a 4px solid;
 `;
 
 const P = styled.p`
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 `;
 
 const Main = () => {
@@ -89,9 +120,9 @@ const Main = () => {
 	if (loading || !presance)
 		return (
 			<Wrapper>
-				<Div>
+				<LoadingContainer>
 					<h1>Loading API...</h1>
-				</Div>
+				</LoadingContainer>
 			</Wrapper>
 		);
 
@@ -99,28 +130,27 @@ const Main = () => {
 
 	return (
 		<Wrapper>
-			<Div>
-				<div>
-					<Image
-						src={`https://cdn.discordapp.com/avatars/${presance.discord_user.id}/${presance.discord_user.avatar}.webp`}
+			<AvatarContainer>
+				<DiscordAvatar>
+					<P>Discord Avatar:</P>
+					<Avatar
+						src={`https://cdn.discordapp.com/avatars/${presance.discord_user.id}/${presance.discord_user.avatar}.webp?size=4096`}
 					/>
-				</div>
-				<div>
-					<P>{presance.kv.gender}</P>
-				</div>
+				</DiscordAvatar>
+			</AvatarContainer>
+			<SpotifyContainer>
 				{presance.spotify && (
 					<div>
-						<Image2 src={presance.spotify.album_art_url} />
+						<AlbumImg src={presance.spotify.album_art_url} />
 						<P>Listening to: {presance.spotify.song}</P>
 						<P>Artist: {presance.spotify.artist.split(";").join()}</P>
 					</div>
 				)}
-				{customStatus && (
-					<div>
-						<P>Discord Status: {customStatus.state}</P>
-					</div>
-				)}
-			</Div>
+			</SpotifyContainer>
+			<DiscordStatusContainer>
+				<P>Discord Status: </P>
+				{customStatus && <CustomStatus>{customStatus.state}</CustomStatus>}
+			</DiscordStatusContainer>
 		</Wrapper>
 	);
 };
