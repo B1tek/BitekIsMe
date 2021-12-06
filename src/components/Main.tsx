@@ -12,7 +12,14 @@ const Wrapper = styled.main`
 	justify-content: center;
 	background-image: linear-gradient(60deg, #9b2440, #9e6b1f);
 	color: #ffffff;
-	font-size: 25px;
+	font-size: 20px;
+`;
+
+const Div = styled.div`
+	padding: 50px;
+	width: 750px;
+	background-color: #303138;
+	border-radius: 25px;
 `;
 
 const Image = styled.img`
@@ -20,7 +27,7 @@ const Image = styled.img`
 	width: 150px;
 	margin-bottom: 10px;
 	border-radius: 100%;
-	border: #303138 solid 4px;
+	border: #25252b solid 4px;
 `;
 
 const Image2 = styled.img`
@@ -80,7 +87,9 @@ const Main = () => {
 	if (loading || !presance)
 		return (
 			<Wrapper>
-				<h1>Loading API...</h1>
+				<Div>
+					<h1>Loading API...</h1>
+				</Div>
 			</Wrapper>
 		);
 
@@ -88,26 +97,28 @@ const Main = () => {
 
 	return (
 		<Wrapper>
-			<div>
-				<Image
-					src={`https://cdn.discordapp.com/avatars/${presance.discord_user.id}/${presance.discord_user.avatar}.webp`}
-				/>
-			</div>
-			<div>
-				<P>{presance.kv.gender}</P>
-			</div>
-			{presance.spotify && (
+			<Div>
 				<div>
-					<Image2 src={presance.spotify.album_art_url} />
-					<P>Listening to: {presance.spotify.song}</P>
-					<P>Artist: {presance.spotify.artist.split(";").join()}</P>
+					<Image
+						src={`https://cdn.discordapp.com/avatars/${presance.discord_user.id}/${presance.discord_user.avatar}.webp`}
+					/>
 				</div>
-			)}
-			{customStatus && (
 				<div>
-					<P>Discord Status: {customStatus.state}</P>
+					<P>{presance.kv.gender}</P>
 				</div>
-			)}
+				{presance.spotify && (
+					<div>
+						<Image2 src={presance.spotify.album_art_url} />
+						<P>Listening to: {presance.spotify.song}</P>
+						<P>Artist: {presance.spotify.artist.split(";").join()}</P>
+					</div>
+				)}
+				{customStatus && (
+					<div>
+						<P>Discord Status: {customStatus.state}</P>
+					</div>
+				)}
+			</Div>
 		</Wrapper>
 	);
 };
