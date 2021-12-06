@@ -15,6 +15,7 @@ const Logo = styled.img`
 	padding: 10px;
 	border-radius: 25px;
 	transition: background-color 0.3s ease-in-out;
+	border: 1px solid #32333a;
 	&:hover {
 		background-color: #303138;
 	}
@@ -49,6 +50,7 @@ const Button = styled.button`
 	font-size: inherit;
 	font-weight: inherit;
 	transition: background-color 0.3s ease-in-out;
+	box-shadow: -1px -1px 7px 1px cyan, 1px 1px 7px 1px blue;
 
 	&:hover {
 		background-color: rgba(0, 136, 169, 0.6);
