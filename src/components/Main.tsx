@@ -18,7 +18,7 @@ const Wrapper = styled.main`
 const Div = styled.div`
 	padding: 50px;
 	width: 50%;
-	background-color: #303138;
+	background-color: #24252a;
 	border-radius: 25px;
 `;
 
