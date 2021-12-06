@@ -19,7 +19,7 @@ const Div = styled.div`
 	margin-bottom: 30px;
 	margin-top: 30px;
 	padding: 50px;
-	width: 50%;
+	width: 70%;
 	background-color: #24252a;
 	border-radius: 25px;
 `;
