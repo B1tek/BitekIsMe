@@ -22,7 +22,7 @@ const AvatarContainer = styled.div`
 	width: 20%;
 	background-color: #24252a;
 	border-radius: 25px;
-	box-shadow: -1px -1px 7px 1px red, 1px 1px 7px 1px blue;
+	box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.7);
 
 	&:hover {
 		-webkit-transform: scale(1.025);
@@ -38,18 +38,18 @@ const LoadingContainer = styled.div`
 	padding: 50px;
 	background-color: #24252a;
 	border-radius: 25px;
-	box-shadow: -1px -1px 7px 1px red, 1px 1px 7px 1px blue;
+	box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.7);
 `;
 
 const SpotifyContainer = styled.div`
-	margin-left: 30px;
-	margin-right: 30px;
+	margin-left: 45px;
+	margin-right: 45px;
 	margin-bottom: 10px;
 	margin-top: 10px;
 	padding: 25px;
 	background-color: #24252a;
 	border-radius: 25px;
-	box-shadow: -1px -1px 7px 1px red, 1px 1px 7px 1px blue;
+	box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.7);
 
 	&:hover {
 		-webkit-transform: scale(1.025);
@@ -66,7 +66,7 @@ const DiscordStatusContainer = styled.div`
 	width: 20%;
 	background-color: #24252a;
 	border-radius: 25px;
-	box-shadow: -1px -1px 7px 1px red, 1px 1px 7px 1px blue;
+	box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.7);
 
 	&:hover {
 		-webkit-transform: scale(1.025);

@@ -50,7 +50,6 @@ const Button = styled.button`
 	font-size: inherit;
 	font-weight: inherit;
 	transition: background-color 0.3s ease-in-out;
-	box-shadow: -1px -1px 7px 1px cyan, 1px 1px 7px 1px blue;
 
 	&:hover {
 		background-color: rgba(0, 136, 169, 0.6);
