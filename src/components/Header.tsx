@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 const Wrapper = styled.header`
 	background-color: #24252a;
-	padding: 10px 50px;
+	padding: 10px 80px;
+	padding-right: 150px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -39,8 +40,6 @@ const Li = styled.li`
 `;
 
 const Button = styled.button`
-	margin-left: 90px;
-	margin-right: 10px;
 	padding: 9px 30px;
 	background-color: rgba(0, 136, 169, 1);
 	color: white;
