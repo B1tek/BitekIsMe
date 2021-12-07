@@ -16,6 +16,7 @@ const Wrapper = styled.main`
 `;
 
 const AvatarContainer = styled.div`
+	margin-right: 45px;
 	margin-bottom: 10px;
 	margin-top: 20px;
 	padding: 25px;
@@ -42,8 +43,6 @@ const LoadingContainer = styled.div`
 `;
 
 const SpotifyContainer = styled.div`
-	margin-left: 45px;
-	margin-right: 45px;
 	margin-bottom: 10px;
 	margin-top: 10px;
 	padding: 25px;
@@ -60,6 +59,7 @@ const SpotifyContainer = styled.div`
 `;
 
 const DiscordStatusContainer = styled.div`
+	margin-left: 45px;
 	margin-bottom: 20px;
 	margin-top: 10px;
 	padding: 25px;
