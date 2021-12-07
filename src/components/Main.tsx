@@ -163,7 +163,7 @@ const Main = () => {
 					/>
 				</DiscordAvatar>
 			</AvatarContainer>
-			
+
 			{presance.spotify && (
 				<SpotifyContainer>
 					<AlbumImg src={presance.spotify.album_art_url} />
@@ -171,7 +171,7 @@ const Main = () => {
 					<P>Artist: {presance.spotify.artist.split(";").join()}</P>
 				</SpotifyContainer>
 			)}
-			
+
 			<DiscordStatusContainer>
 				<P>Discord Status: </P>
 				{customStatus && <CustomStatus>{customStatus.state}</CustomStatus>}
