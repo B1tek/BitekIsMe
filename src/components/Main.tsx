@@ -163,15 +163,15 @@ const Main = () => {
 					/>
 				</DiscordAvatar>
 			</AvatarContainer>
-			<SpotifyContainer>
-				{presance.spotify && (
-					<div>
-						<AlbumImg src={presance.spotify.album_art_url} />
-						<P>Listening to: {presance.spotify.song}</P>
-						<P>Artist: {presance.spotify.artist.split(";").join()}</P>
-					</div>
-				)}
-			</SpotifyContainer>
+			
+			{presance.spotify && (
+				<SpotifyContainer>
+					<AlbumImg src={presance.spotify.album_art_url} />
+					<P>Listening to: {presance.spotify.song}</P>
+					<P>Artist: {presance.spotify.artist.split(";").join()}</P>
+				</SpotifyContainer>
+			)}
+			
 			<DiscordStatusContainer>
 				<P>Discord Status: </P>
 				{customStatus && <CustomStatus>{customStatus.state}</CustomStatus>}
